@@ -368,11 +368,11 @@ export function ProductionDialog({
             </div>
           </section>
 
-          {/* Premium voice */}
+          {/* Select voice */}
           <section className="space-y-3">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
-                <Label>Premium voice</Label>
+                <Label>Select voice</Label>
                 <p className="text-xs text-muted-foreground">
                   Pick who reads your script, then press a voice to hear it.
                 </p>
@@ -380,9 +380,6 @@ export function ProductionDialog({
             </div>
             {engines.map((engine) => (
               <div key={engine.id} className="space-y-2">
-                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                  {engine.label}
-                </p>
                 <div className="grid gap-2 sm:grid-cols-2">
                   {engine.voices.map((voice) => {
                     const on = voiceId === voice.id;
